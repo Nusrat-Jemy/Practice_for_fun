@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int sum = 2;
+    int n1 = 1;
+    int n2 = 2;
+    int num = n1 + n2;
+
+    while (num <= 4000000){
+        if (num % 2 == 0){
+            sum +=num;
+            cout << "num = " << num << endl;
+            cout << "sum = " << sum << endl;
+        }
+
+        n1 = n2;
+        n2 = num;
+        num = n1 + n2;
+    }
+    cout << "total sum = " << sum << endl;
+    return 0;
+}
